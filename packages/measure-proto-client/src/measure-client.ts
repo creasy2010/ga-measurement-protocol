@@ -31,27 +31,27 @@ export interface IDimensions {
   cd20?:string;
 }
 
-enum hitTypeEnum{
+enum hitTypeEnum {
   pageview="pageview",
   event="event",
   timing="timing",
   screenview="screenview",
 }
 
-interface IBaseRequest extends IDimensions{
+interface IBaseRequest extends IDimensions {
   v:number;     //version
   tid:string;   // Tracking ID / Property ID.
   cid:string;   //Anonymous Client ID.
 }
 
-export interface IViewRequest extends IBaseRequest{
+export interface IViewRequest extends IBaseRequest {
   t:hitTypeEnum.pageview //
   dh:string; // Document hostname. eg:mydemo.com
   dp:string; // Page eg:/home
   dt:string; // Title.
 }
 
-export interface IEventRequest extends IBaseRequest{
+export interface IEventRequest extends IBaseRequest {
   t:hitTypeEnum.event //
   ec:string; //Event Category. Required.
   ea:string; //Event Action. Required.
@@ -59,7 +59,7 @@ export interface IEventRequest extends IBaseRequest{
   ev:number; // Event value.
 }
 
-export interface ITimeingRequest extends IBaseRequest{
+export interface ITimeingRequest extends IBaseRequest {
   t:hitTypeEnum.timing //
   utc:string  // Timing category.
   utv:string  // Timing variable.
