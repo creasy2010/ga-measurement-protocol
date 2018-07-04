@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/universal-analytics": "^0.4.2",
+    "universal-analytics": "^0.4.17"
+  }
 }
